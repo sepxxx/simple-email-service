@@ -1,0 +1,6 @@
+### Send POST request with body as parameters
+POST http://localhost:8080/api/email/send
+Content-Type: application/x-www-form-urlencoded
+
+destination_email = gogog@mal.ru &
+message = kyky

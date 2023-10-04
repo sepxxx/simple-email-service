@@ -1,0 +1,7 @@
+rootProject.name = 'simple-email-service'
+include 'client-api'
+include 'worker'
+//include 'miscellaneous'
+include 'miscellaneous:store'
+findProject(':miscellaneous:store')?.name = 'store'
+
