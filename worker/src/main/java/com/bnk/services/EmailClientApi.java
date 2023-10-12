@@ -16,11 +16,12 @@ public class EmailClientApi {
     public boolean sendEmail(String destinationEmail, String message) {
         try {
             Thread.sleep(1000L);
-            log.info("Email to %s successfully sent.".formatted(destinationEmail));
+//            log.info("Email to %s successfully sent.".formatted(destinationEmail));
         } catch (InterruptedException e) {
             return false;
         }
 
-        return random.nextInt(11) <5;
+//        return random.nextInt(11) <5;
+        return true;
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -23,8 +24,11 @@ public class SendEmailTaskDao {
         return sendEmailTaskRepository.save(entity);
     }
 
-    public List<SendEmailTaskEntity> findAllNotProcessed() {
-        return sendEmailTaskRepository.findAllNotProcessed();
+    public List<Long> findNotProcessedIds() {
+        return sendEmailTaskRepository.findNotProcessedIds();
+    }
+    public Optional<SendEmailTaskEntity> findNotProcessedById(Long id) {
+        return sendEmailTaskRepository.findNotProcessedById(id);
     }
 
     @Transactional
